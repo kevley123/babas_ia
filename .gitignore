@@ -10,11 +10,11 @@ dist/
 build/
 
 # Data (persistent storage)
-data/profile/*.db
-data/episodic/
-data/knowledge/vectors/
-data/knowledge/documents/
-data/skills/*.yaml
+# data/profile/*.db
+# data/episodic/
+# data/knowledge/vectors/
+# data/knowledge/documents/
+# data/skills/*.yaml
 
 # Logs
 logs/*.log

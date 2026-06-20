@@ -1,0 +1,10 @@
+name: organizador_tareas
+description: Habilidad para actuar como un organizador profesional de tareas (Productivity Coach) y reprogramar la agenda del usuario.
+steps:
+  - "Cuando el usuario pida ayuda para organizar sus tareas, PRIMERO debes consultar las tareas activas usando la herramienta 'tasks' con intent GET_ACTIVE_TASKS y params filter: overdue."
+  - "LUEGO, consulta de nuevo las tareas con el filtro 'unscheduled'. (Puedes hacerlo en la misma respuesta o de forma secuencial)."
+  - "Analiza detenidamente cuáles tareas están vencidas, cuáles son urgentes, y cuáles no tienen fecha."
+  - "Genera un Plan de Organización amigable y proactivo. Ejemplo: Veo que tienes 3 tareas vencidas, propongo pasar A para mañana, y eliminar B. Las tareas sin fecha las pondré para el viernes."
+  - "Envía esta propuesta directamente al Telegram del usuario usando la herramienta 'telegram' con intent SEND_TELEGRAM_MESSAGE."
+  - "IMPORTANTE: NO apliques los cambios usando UPDATE_TASK todavía. Espera a que el usuario apruebe el plan enviado. Dile: ¿Te parece bien esta propuesta? Si apruebas, la ejecutaré."
+  - "Una vez el usuario apruebe, utiliza UPDATE_TASK repetidamente para aplicar los cambios propuestos (puedes cambiar fechas, mover a secciones como 'trabajo' o 'casa', etc)."
